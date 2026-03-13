@@ -1,25 +1,29 @@
 package main
 
 import (
-	"product-crud/config"
-	"product-crud/models"
-	"product-crud/routes"
+	"go-fiber-product-api/config"
+	"go-fiber-product-api/models"
+	"go-fiber-product-api/routes"
+	"log"
 
-	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v3"
+	"github.com/gofiber/fiber/v3/middleware/cors"
 )
 
 func main() {
 
 	app := fiber.New()
 
+	// CORS
 	app.Use(cors.New())
 
+	// database
 	config.ConnectDB()
 
 	config.DB.AutoMigrate(&models.Product{})
 
+	// routes
 	routes.ProductRoutes(app)
 
-	app.Listen(":3000")
+	log.Fatal(app.Listen(":3000"))
 }

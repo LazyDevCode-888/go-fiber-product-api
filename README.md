@@ -22,5 +22,5 @@ REST API สำหรับจัดการสินค้า
 
 ```bash
 git clone https://github.com/LazyDevCode-888/go-fiber-product-api.git
-cd product-crud
+cd go-fiber-product-api
 go mod tidy

@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"product-crud/config"
-	"product-crud/models"
+	"go-fiber-product-api/config"
+	"go-fiber-product-api/models"
 
 	"github.com/gofiber/fiber/v3"
 )

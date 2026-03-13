@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"product-crud/controllers"
+	"go-fiber-product-api/controllers"
 
 	"github.com/gofiber/fiber/v3"
 )
