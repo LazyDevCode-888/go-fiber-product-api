@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+# .gitignore
+.env
+tmp/
+*.exe
+*.log
+
